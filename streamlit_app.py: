@@ -1,24 +1,13 @@
 import streamlit as st
- from pathlib import Path
- from pathlib import Path
- 
- 
-# Set page title and layout
+from pathlib import Path
+
 # Set page config
- st.set_page_config(
- st.set_page_config(
-     page_title="2048 Game",
-     page_title="2048 Game",
-    layout="centered"
+st.set_page_config(
+    page_title="2048 Game",
     layout="centered",
     initial_sidebar_state="collapsed"
- )
- )
- 
- 
-# Load and display your HTML game
+)
+
 # Read and display your HTML file
-html_path = "2048.html"
 html = Path("2048.html").read_text()
-html = Path(html_path).read_text()
 st.components.v1.html(html, width=800, height=600, scrolling=True)
